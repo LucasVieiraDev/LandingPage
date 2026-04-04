@@ -54,11 +54,11 @@ a.btn {
 }
 
 .btn-default {
-    background-color: var(--color-primary-1);
-    color: var(--color-neutral-0);
+    background-color: var(--color-2);
+    color: var(--color-5);
 
     &:hover {
-        background-color: var(--color-primary-2);
+        background-color: var(--color-1);
     }   
 }
 
