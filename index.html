@@ -11,38 +11,38 @@
 
 
     <header id="header">
-    <nav class="navbar">
-        <img 
-        src="src/images/logo.png" 
-        alt="logo tipo"
-        class="logo"
-        >
+        <nav class="navbar">
+            <img 
+            src="src/images/logo.png" 
+            alt="logo tipo"
+            class="logo"
+            >
 
-        <button class="btn btn-mobile">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+            <button class="btn btn-mobile">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
-        <ul id="nav-links" >
-            <li>
-                <a href="#home">Home</a>
-            </li>
-            <li>
-                <a href="#trending">Em alta</a>
-            </li>
-            <li>
-                <a href="#about">Sobre nos</a>
-            </li>
-            <li>
-                <a href="#products">Novidades</a>
-            </li>
-        </ul>
+            <ul id="nav-links" class="link-navbar" >
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#trending">Serviços Ar condicionado</a>
+                </li>
+                <li>
+                    <a href="#products">Serviços Refrigeração</a>
+                </li>
+                <li>
+                    <a href="#about">Sobre nos</a>
+                </li>
+                
+            </ul>
 
-        <a href="" class="btn btn-default">
-            Contatar
-        </a>
+            <a href="" class="btn btn-default">
+                Contatar
+            </a>
 
-    </nav>
-
+        </nav>
     
     </header>
     
@@ -50,14 +50,26 @@
 
         <section id="home">
 
-            <img src="src/images/detail.png"
-             alt="starbucks drink"
-             class="home-imagem "
-            >
+            <div class="img-foco"> 
 
-            <h1 class="home-title">Bem-vindo à 
-                <span>Nix</span>
+                <img src="src/images/principal.avif" alt="foto homem concertando ar condicionado">            
+
+            </div>
+
+         
+
+
+            <h1 class="home-title">Bem-vindo à <br>
+                <span>Nix</span> 
             </h1>
+
+            <h2>
+            
+                <span>Climatização & Refrigeração</span> 
+                <br> <br>
+                Seu conforto é o nosso compromisso!
+
+            </h2>
 
             <p class="home-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam quae quos dolorum. Praesentium minima alias doloremque vitae? Enim similique ea sapiente voluptas sed est excepturi dolorum commodi magni consequatur.</p>
             
@@ -75,7 +87,8 @@
 
         <section id="trending">
             <h2 class="title">
-                Em alta
+                Serviços em <br>
+                <span>ar condicionado</span>
 
             </h2>
 
@@ -83,64 +96,73 @@
 
                 <div class="trending-card">
                     <img 
-                        src="src/images/trending/card1.png" 
+                        src="src/images/instalacao.avif" 
                         alt="starbucks drink"
                     >
 
-                    <div class="trending-rate">
-
-                        <p>
-                            5 <i class="fa-solid fa-star"></i>
-                        </p>
-
-                    </div>
 
                     <p class="trending-card-description">
-                        Frapputino
-                        <span>Avela</span>
-                </div>
-
-                <div class="trending-card">
-                    <img 
-                        src="src/images/trending/card2.png" 
-                        alt="starbucks drink"
-                    >
-
-                    <div class="trending-rate">
-
-                        <p>
-                            5 <i class="fa-solid fa-star"></i>
-                        </p>
-
-                    </div>
-
-                    <p class="trending-card-description">
-                        Frapputino
-                        <span>Pistache</span>
+                        Instalação
+                      
                     </p>
                 </div>
 
                 <div class="trending-card">
                     <img 
-                        src="src/images/trending/card3.png" 
+                        src="src/images/manutencao.avif" 
+                        alt="starbucks drink"                    
+                    >
+
+                    <p class="trending-card-description">
+                        Manutenção
+                       
+                    </p>
+                </div>
+
+                <div class="trending-card">
+                    <img 
+                        src="src/images/limpeza.avif" 
                         alt="starbucks drink"
                     >
 
-                    <div class="trending-rate">
-
-                        <p>
-                            5 <i class="fa-solid fa-star"></i>
-                        </p>
-
-                    </div>
-
                     <p class="trending-card-description">
-                        Frapputino
-                        <span>Morango</span>
+                        Higienização
+                       
                     </p>
                 </div>
 
             </div>
+        </section>
+
+        
+        <section id="products">
+                
+            <h2 class="title">
+                Serviços em <br>
+                <span>Refrigeração</span>
+
+            </h2>
+
+            <h2 class="products-cards">
+                <div class="product-card">
+                    <img src="src/images/icons/air-conditioner-svgrepo-com (1).svg" alt="">
+
+                    <div class="product-content">
+                        <h3>
+                            Manutenção em geladeiras freezers e bebedouros
+                            <span>
+                                Temos a solução para todos os problemas relacionados a equipamentos de refrigeração. <br>
+                                Manutencao em geral, defeitos elétricos, troca de compressores, vazemantos, carga de fluido refrigerante (gás), etc.  
+                                
+                            </span>
+                        </h3>
+                    </div>
+                </div>
+
+            
+            </h2>
+
+            
         </section>
 
         <section id="about">
@@ -150,7 +172,7 @@
 
             <div class="about-content">
                 <img 
-                    src="src/images/about/about-us.png" 
+                    src="src/images/logo.png" 
                     alt="Sobre nos"
                     class="about-image"
                 >
@@ -187,54 +209,6 @@
 
         </section>
 
-        <section id="products">
-            <h2 class="products-cards">
-                <div class="product-card">
-                    <img src="src/images/products/1.png" alt="">
-
-                    <div class="product-content">
-                        <h3>
-                            Moccha
-                            <span>Chocolate</span>
-                        </h3>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <img src="src/images/products/2.png" alt="">
-
-                    <div class="product-content">
-                        <h3>
-                            Moccha
-                            <span>Morango</span>
-                        </h3>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <img src="src/images/products/3.png" alt="">
-
-                    <div class="product-content">
-                        <h3>
-                            Moccha
-                            <span>Cafe</span>
-                        </h3>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <img src="src/images/products/4.png" alt="">
-
-                    <div class="product-content">
-                        <h3>
-                            Moccha
-                            <span>Manga</span>
-                        </h3>
-                    </div> 
-                </div>
-            
-            </h2>
-        </section>
 
 
     </main>
