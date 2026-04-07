@@ -157,7 +157,7 @@ a.btn {
              
             img {
                 width: clamp(300px, 5vw, 600px);
-                border-radius: 50%; 
+                border-radius: 25%; 
                 box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.5);
             }
 
