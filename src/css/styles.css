@@ -95,7 +95,7 @@ a.btn {
     position: relative;
     align-items: center;
     justify-content: center;
-    min-height: calc(50vh - 96px);
+    min-height: 70vh;
     padding: 32px 4%;
   
 
@@ -137,8 +137,6 @@ a.btn {
         font-weight: 500;
         max-width: 600px;
         padding: 20px;
-        padding-top: 25%;
-
     }
 
     .home-actions {
@@ -235,7 +233,25 @@ a.btn {
     }
 }
 
+.reveal{
+    animation: reveal ;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
 
+@keyframes reveal {
+    from{
+        filter: blur(10px);
+        opacity: 0;
+        scale: .8;
+        translate: 0 4em;
+    }to{
+        filter: blur(0);
+        opacity: 1;
+        scale: 1;
+        translate: 0 0;
+    }
+}
 
 #products {
     padding: 48px 8%;
@@ -276,7 +292,7 @@ a.btn {
 
                 h3 {
 
-                    color: var(--color-2);
+                    color: var(--color-3);
                     font-size: 1.8rem;
                     display: flex;
                     align-items: center;
