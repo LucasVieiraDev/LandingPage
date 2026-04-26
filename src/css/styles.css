@@ -2,6 +2,7 @@
 @import url('../css/varebles.css');
 @import url('../css/navbar.css');
 
+
 *{
     margin: 0;
     padding: 0;
@@ -13,6 +14,8 @@
     background-image: url('../images/background-mobile.png');
     background-size: contain;
 }
+
+
 
 h2.title {
     text-align: center;
@@ -86,14 +89,15 @@ a.btn {
 }
 
 #home {
+
     display: flex;
     flex-direction: column;
     position: relative;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 96px);
+    min-height: calc(50vh - 96px);
     padding: 32px 4%;
-    padding-top: clamp(0px, 5vw, 32px);
+  
 
     .home-title {
         color: var(--color-5);
@@ -115,7 +119,7 @@ a.btn {
 
     h2 {
         padding: 80px;
-        padding-top: 0px;
+        padding-top: 10%;
         text-align: center;
         
         font-size: clamp(1.3rem, 3vw, 3rem);
@@ -133,6 +137,7 @@ a.btn {
         font-weight: 500;
         max-width: 600px;
         padding: 20px;
+        padding-top: 25%;
 
     }
 
@@ -157,7 +162,7 @@ a.btn {
              
             img {
                 width: clamp(300px, 5vw, 600px);
-                border-radius: 50%; 
+                border-radius: 25%; 
                 box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.5);
             }
 
@@ -283,7 +288,7 @@ a.btn {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
             h3 {
-                color: var(--color-neutral-0);
+                color: var(--color-3);
                 font-size: 1.8rem;
                 margin-bottom: 4px ;
 
@@ -294,7 +299,7 @@ a.btn {
             }
 
             p {
-                color: var(--color-neutral-0);
+                color: var(--color-3);
                 font-size: 1rem;
 
                 span {
@@ -310,11 +315,11 @@ a.btn {
 }
 
 footer {
-    background-color: var(--color-1);
+    background-color: var(--color-6);
     text-align: center;
     color: var(--color-neutral-0);
     padding: 12px;
-    border-radius: 15px;
+
 
     p {
         font-size: 1rem;

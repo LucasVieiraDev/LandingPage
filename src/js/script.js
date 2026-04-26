@@ -23,7 +23,7 @@ mobileBtn.addEventListener('click', () => {
 window.addEventListener('scroll', () =>{
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollTop > lastScrollTop){
-        header.style.top ='-130px'
+        header.style.top ='-70px'
     } else {
         header.style.top = '0'
 

@@ -6,16 +6,16 @@
     <title>Nix Clima</title>
     <link rel="stylesheet" href="src/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="src/css/slider.css">
     <link rel="stylesheet" href="src/css/btn-wa.css">
+    <link rel="stylesheet" href="src/css/slide.css">
 </head>
 <body>
 
-
+<!-- inicio nav bar -->
     <header id="header">
         <nav class="navbar">
             <img 
-            src="src/images/logo.avif" 
+            src="src/images/logo.webp" 
             alt="logo tipo"
             class="logo"
             >
@@ -48,24 +48,91 @@
         </nav>
     
     </header>
+<!-- fim nav bar -->
+
     
     <main id="container">
 
-        <section id="home">
+        <!-- inicio carrosel -->
 
-
+        <div class="slide">
+            <div class="carrosel ">
+        
+                <div class="content">
+                    <h2 class="titulo">Seu conforto começa na instalação <span>correta</span> </h2>
+                    <h2 class="titulo-destaque">instalação Profissional</h2>
+                    <p class="conteudo">
+                    
+                        Uma instalação mal executada gera consumo excessivo, ruídos, 
+                        vazamentos e menor vida útil do equipamento.
+                        Com a NIX, seu ar-condicionado é instalado com segurança, 
+                        precisão e máxima eficiência.
+                    </p>
+                </div>
+        
+                <div class="image">
+                    <div class="shape">
+                        
+                    </div>
+                    <img src="./src/images/slide/img-3.png" alt="">
+                </div>
+        
+            </div>
     
-            <h1 class="home-title">Bem-vindo à <br>
-                <span>Nix</span> 
-            </h1>
-
-            <h2>
+            <div class="carrosel ">
+        
+                <div class="content">
+                    <h2 class="titulo">Respire ar <span>puro</span> todos os dias</h2>
+                    <h2 class="titulo-destaque">higienização</h2>
+                    <p class="conteudo">
+                        A falta de limpeza acumula poeira, fungos e bactérias, prejudicando sua saúde e reduzindo o desempenho do aparelho.
+                        A higienização profissional da NIX garante um ambiente mais saudável, leve e seguro.
+                    </p>
+                </div>
+        
+                <div class="image ">
+                    <div class="shape">
+                        
+                    </div>
+                    <img src="./src/images/slide/img-5.png" alt="">
+                </div>
+        
+            </div>
+    
+            <div class="carrosel active">
+        
+                <div class="content">
+                    <h2 class="titulo animacao"><span>Qualidade</span> e <span>confiança</span> em cada serviço</h2>
+                    <h2 class="titulo-destaque animacao ">Porque a NIX?</h2>
+                    <p class="conteudo animacao">
+                        Na NIX, você conta com atendimento rápido, equipe qualificada e soluções completas em climatização e refrigeração.
+                        Nosso compromisso é entregar excelência do início ao fim.
+                    </p>
+                </div>
+        
+                <div class="image animacao">
+                    <div class="shape">
+                        
+                    </div>
+                    <img src="./src/images/slide/img-1.png" alt="">
+                </div>
+        
+            </div>
             
-                <span>Climatização & Refrigeração</span> 
-                <br> <br>
-                Seu conforto é o nosso compromisso!
+            <div class="arrows">
+                <div class="arrow left"><i class="fa-solid fa-angle-left"></i></div>
+                <div class="arrow right"><i class="fa-solid fa-angle-right"></i></div>
+                
+            </div>
 
-            </h2>
+        </div>
+         
+
+
+        <!-- fim carrosel -->
+        
+       
+        <section id="home">
 
             <p class="home-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam quae quos dolorum. Praesentium minima alias doloremque vitae? Enim similique ea sapiente voluptas sed est excepturi dolorum commodi magni consequatur.</p>
             
@@ -157,10 +224,7 @@
                         </h3>
                     </div>
                 </div>
-
-            
-            </h2>
-
+            </h2> 
             
         </section>
 
@@ -212,7 +276,7 @@
         <div class="whatsapp">
 
             <a href="https://wa.me/5532984458579" target="_blank">
-                <img src="/src/images/icons/whatsapp-btn.avif" alt="Botao whatsapp">
+                <img src="./src/images/icons/whatsapp-btn.avif" alt="Botao whatsapp">
             </a>
             
         </div>
@@ -231,6 +295,7 @@
 
 
 <script src="src/js/script.js"></script>
+<script src="src/js/slide.js"></script>
      
 </body>
 </html>
