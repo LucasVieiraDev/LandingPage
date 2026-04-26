@@ -78,7 +78,7 @@
     text-transform: uppercase;
     font-weight: 100;
     padding-bottom: .5em;
-    animation-delay: 0.7s ;
+    animation-delay: 0.3s ;
     span{
         font-weight: 700;
         color: var(--color-2);
@@ -92,16 +92,13 @@
     line-height: 1em;
     padding-bottom: .5em;
     letter-spacing: .1em;
-    animation-delay: 1.1s ;
+    animation-delay: 0.5s ;
 }
 .conteudo{
     font-size: larger;
-    animation-delay: 1.6s;
+    animation-delay: 1s;
     
 }
-
-
-
 
 
 .image{
@@ -112,11 +109,11 @@
     justify-content: center;
     position: relative;
     box-sizing: border-box;
-    animation-delay: 1.7s;
+    animation-delay: 0.8s;
 }
 .shape{
     width: 70%;
-    height: 50%;
+    height: 60%;
     background-color: var(--color-2);
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     animation: blobby 10s ease-in-out infinite;
@@ -169,7 +166,8 @@
         flex-direction: column;
         justify-content: start;
         gap: 10%;
-        padding-top: 10%;
+        padding-top: 20px;
+        height: 92vh;
     }
     .content{
         width: 70vw;
@@ -203,20 +201,22 @@
         border-radius: 30px;
     }
 
-    .conteudo{
-        position: absolute;
-        font-size: medium;
-        top: 65vh;
-        text-align: justify;
-        padding: 0% 10%;
-    }
     .image{
         width: 275px;
         height: 200px;
+        
 
     }
     .shape{
-        height: 200px;
-        width: 275px;
+        height: 170px;
+        width: 220px;
+    }
+
+    .conteudo{
+        position: absolute;
+        font-size: medium;
+        top: 60vh;
+        text-align: justify;
+        padding: 0% 10%;
     }
 }

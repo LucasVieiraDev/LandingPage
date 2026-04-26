@@ -87,7 +87,7 @@ function intervaloInicio(){
             changeSlide();
         }
 
-    }, 10000);
+    }, 25000);
 
 }
 
