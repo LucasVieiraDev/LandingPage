@@ -15,11 +15,13 @@
     background-size: contain;
 }
 
+h2.title{
+    text-align: center; 
+}
 
-
-h2.title {
+h2.titulo {
     text-align: center;
-    
+    justify-content: center;
 }
 
 .title {
