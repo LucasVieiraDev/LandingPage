@@ -1,0 +1,170 @@
+.sales{
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+
+.contain-sales{
+    
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: unset;
+    background-image: url(../images/sala-co-ar.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+
+.item-sales{
+    width: 300px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.2);   
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);  
+    border: 1px solid white;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+    border-radius: 10px;
+    text-align: left;
+    margin: 2%;
+    box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.2);
+    transition: all .5s;
+    position: relative;
+    transition: all ease-in-out 1s;
+}
+
+
+
+.img-sale{
+    height: 70%;
+    width: 90%;
+    background-color: var(--color-3);
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+    box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-in-out 1s;
+}
+
+.img-sale img{
+    width: 100%;
+    height: 100%;
+}
+
+.title-sale{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+    color: var(--color-5);
+    transition: all ease-in-out .5s;
+}
+
+.title-sale h3{
+    font-size: .8rem;
+    font-weight: 400;
+    padding: 0 1rem ;
+}
+
+.title-sale h2{
+    font-size: 1rem;
+    padding: 0 1rem;
+}
+
+.description-sale p{
+    font-size: 0.7rem;
+    padding: 1rem;
+    display: none;
+    transition: all ease-in-out 1s;
+}
+.d-btn{
+    display: flex;
+    gap: 30px;
+    padding-bottom: 10px;
+    transition: all ease-in-out 1s;
+}
+.cta-sale{
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);   
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);  
+    border: 1px solid var(--color-5);
+    color: var(--color-5);
+    text-decoration: none;
+    font-weight: 600; 
+    width: 100px;
+    
+}
+.cta-sale:hover{
+    background-color: var(--color-1);
+    color: var(--color-3);
+    border: 1px solid var(--color-3);
+    
+}
+
+.item-sales.detalhes{
+    height: 70vh;
+
+    .img-sale{
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+    .d-btn{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        flex-direction: column;
+        
+    }
+    .title-sale{
+        margin-top: 170px;
+    }
+    .description-sale p{
+        display: inherit;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .contain-sales{
+        background: none;
+    }
+    .sales::before {
+        content: '';
+        background-image: url(../images/banner.avif);
+        background-size: contain;
+        background-repeat: no-repeat;
+        top: 25px; right: 0; bottom: 0; left: 0;
+        position: absolute;
+        opacity: 0.4;
+    }
+    #products .sales-t{
+        span{
+            color: var(--color-5);
+        }
+    }
+}

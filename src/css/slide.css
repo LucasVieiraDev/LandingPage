@@ -7,15 +7,11 @@
 }
 
 
-.container{
-    display: flex;
-    justify-content: center;
-}
+
 
 .carrosel{
     width: 100vw;
     height: 95vh;
-    
     display: flex;
     justify-content:space-evenly;
     align-items: center;
@@ -32,7 +28,7 @@
 }
 
 .image.animacao,
-.titulo.animacao ,
+.titulo_slide.animacao ,
 .titulo-destaque.animacao,
 .conteudo.animacao {
     opacity: 0;
@@ -50,17 +46,8 @@
         opacity: 1;
      }
 }
-
-.content{
-    width: 50vw;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    color: var(--color-3);
-}
-
 .animacao {
+
     animation: showContent 0.5s ease-in-out 1 forwards;
 }
 
@@ -73,6 +60,38 @@
         opacity: 1;
         filter: blur(0);
     }
+}
+
+.content{
+    width: 50vw;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--color-3);
+    background: rgba(44, 43, 43, 0.366);   
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.titulo_slide {
+    font-size: 2em;
+    line-height: 1em;
+    text-transform: uppercase;
+    font-weight: 100;
+    padding-bottom: .5em;
+    animation-delay: 0.3s ;
+    justify-content: left;
+
+    span{
+        font-weight: 700;
+        color: var(--color-2);
+    }
+    
 }
 
 .titulo {
@@ -96,37 +115,49 @@
     padding-bottom: .5em;
     letter-spacing: .1em;
     animation-delay: 0.5s ;
+    position: relative;
 }
 .conteudo{
     font-size: larger;
-    animation-delay: 1s;
+    animation-delay: 0.8s;
     
 }
 
 
 .image{
     width: 40vw;
-    height: 40vw;
+    height: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     box-sizing: border-box;
-    animation-delay: 0.8s;
+    animation-delay: 1s;
+    background: rgba(44, 43, 43, 0.2);   
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
 }
 .shape{
-    width: 70%;
-    height: 60%;
+    width: 90%;
+    height: 90%;
     background-color: var(--color-2);
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    animation: blobby 10s ease-in-out infinite;
-    box-shadow: 10px 10px 20px 1px rgba(6, 176, 188, 0.518);
+    box-shadow: 10px 10px 20px 1px rgba(136, 239, 255, 0.296);
     opacity: 1;
+    animation: blobby 10s ease-in-out infinite;
 }
 @keyframes blobby {
-    0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-    50% { border-radius: 30% 60% 50% 40% / 40% 60% 60% 50%; }
-    100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; 
+    box-shadow: 10px 10px 20px 1px rgba(136, 239, 255, 0.296);}
+
+    50% { border-radius: 30% 60% 50% 40% / 40% 60% 60% 50%; 
+        box-shadow: -5px -5px 20px 1px rgba(136, 239, 255, 0.296);
+    }
+    100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    box-shadow: 10px 10px 20px 1px rgba(136, 239, 255, 0.296);
+    }
 }
 .image img{
     width: 90%;
@@ -163,7 +194,7 @@
     scale: 1.1;
 }
 
-@media (max-width: 1000px){
+@media (max-width: 768px){
 
     .carrosel {        
         flex-direction: column;
@@ -176,15 +207,15 @@
         margin-top: 3%;
     }
     .content{
-        width: 70vw;
-        height: 20vh;
+        width: 87vw;
+        height: 50vh;
         align-items: center;
         justify-content: center;
 
         text-align: center;
     }
 
-    .titulo{
+    .titulo_slide{
     font-size: 1.2em;
     line-height: 1.2em;
     text-transform: uppercase;
@@ -192,7 +223,7 @@
     padding-bottom: 1em;
     }
     .titulo-destaque{
-        font-size: 2.5em;
+        font-size: 2.3em;
 
 
     }
@@ -200,17 +231,18 @@
         content: '';
         display: block;
         width: 100px;
-        height: 12px;
+        height: 10px;
         background-color: var(--color-2);
         position: absolute;
-        transform: translateY(2.5em);
+        bottom: 0;
         border-radius: 30px;
     }
 
     .image{
-        width: 275px;
-        height: 200px;
-        
+        width: 87vw;
+        height: 220px;
+        position: absolute;
+        bottom: 100px;
 
     }
     .shape{
@@ -219,7 +251,7 @@
     }
 
     .conteudo{
-        position: absolute;
+        
         font-size: medium;
         top: 60vh;
         text-align: justify;
