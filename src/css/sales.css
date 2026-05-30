@@ -14,8 +14,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: unset;
-    background-image: url(../images/sala-co-ar.jpeg);
+    /* gap: 10px; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

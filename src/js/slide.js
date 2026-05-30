@@ -11,7 +11,6 @@ const content = document.querySelectorAll('.content')
 index = 0;
 lastSlide = slideArray.length - 1;
 
-console.log(image)
 
 function changeSlide(){
     let activeSlide = document.querySelector('.carrosel.active');

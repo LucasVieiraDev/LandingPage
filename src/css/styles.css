@@ -28,7 +28,6 @@ h2.titulo {
     font-size: 2.5rem;
     text-transform: uppercase;
     color: var(--color-5);
-    font-weight: 400vh;
     position: relative;
 
     span {
@@ -141,6 +140,7 @@ a.btn {
             width: clamp(280px, 5.5vw, 700px);
             height: 310px;
             display: flex;
+            
             align-items: flex-start;
             justify-content: center;
             background-color: var(--color-1);
@@ -185,12 +185,19 @@ a.btn {
                     }
     
                 }
+                .btn-t-card{
+                    position: absolute;
+                    bottom: -45px;
+                    
+                }
+
+
             }
         }
 
         .contain-card:hover{
-            height: 400px;
-           overflow: visible;
+            height: 410px;
+            overflow: visible;
         }
 
         .contain-card:hover img{
@@ -200,7 +207,7 @@ a.btn {
         }
 
         .contain-card:hover .trending-card-description{
-            margin-top: 170px;
+            margin-top: 125px;
             
         }
 

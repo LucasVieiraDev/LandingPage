@@ -1,0 +1,371 @@
+
+
+#ranking {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title p {
+    color: hsl(214, 3%, 58%);
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100vw;
+    max-width: 1400px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    background: linear-gradient(135deg, #081120, #101c31, #081120);
+    padding-bottom: 25px;
+    /* mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0),
+    ); */
+}
+
+.n-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    cursor: pointer;
+    z-index: 20;
+    transition: .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.n-btn:hover {
+    background: #0077ff;
+    transform: translateY(-50%) scale(1.2);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    gap: 22px;
+    overflow-x: auto;
+    scroll-behavior: auto;
+    scrollbar-width: none;
+    padding: 20px;
+    height: 85vh;
+    overflow: visible;
+    width: 100%;
+    /* background-color: #4cff9d; */
+    transition: all .5s ease;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel:hover .card{
+    animation-play-state: paused;
+    filter: grayscale(1);
+}
+
+@keyframes runLeft {
+    to{
+        left: -380px;
+    }
+}
+
+.card {
+    position: absolute;
+    width: 300px;
+    height: 600px;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .1);
+    backdrop-filter: blur(18px);
+    border-radius: 20px;
+    left: calc(300px * 7);
+    animation-name: runLeft;
+    animation-duration: var(--animacao-tempo);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: all .5s ease;
+}
+
+.card1 {
+    animation-delay: calc(var(--animacao-tempo) / 7 * (7 - 1) * -1);
+}
+.card2 {
+    animation-delay: calc(var(--animacao-tempo) / 7 * (7 - 2) * -1);
+}
+.card3 {
+    animation-delay: calc(var(--animacao-tempo) / 7 * (7 - 3) * -1);
+}
+.card4 {
+    animation-delay: calc(var(--animacao-tempo) / 7 * (7 - 4) * -1);
+}
+.card5 {
+    animation-delay: calc(var(--animacao-tempo) / 7 * (7 - 5) * -1);
+}
+.card6 {
+    animation-delay: calc(var(--animacao-tempo) / 7 * (7 - 6) * -1);
+}
+.card7 {
+    animation-delay: calc(var(--animacao-tempo) / 7 * (7 - 7) * -1);
+}
+
+
+.carousel .card:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .35);  
+    animation-play-state: paused;  
+    filter: grayscale(0);
+}
+
+
+
+.badge {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    background: var(--color-2);
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 999px;
+    z-index: 10;
+}
+
+.rank {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--color-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.card img {
+    width: 100%;
+    height: 30vh;
+    object-fit: contain;
+
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.content-rank {
+    padding: 22px;
+}
+
+.content-rank h3 {
+    position: relative;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 5px;
+    min-height: 60px;
+    font-weight: 500;
+    
+}
+
+.content-rank p {
+    color: var(--color-3);
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-size: .8em;
+    min-height: 90px;
+}
+
+.stars {
+    margin-bottom: 5px;
+    color: #ffcc00;
+    font-size: 10px;
+}
+
+.price-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #8f98ab;
+    font-size: 10px;
+}
+
+.price {
+    color: #4cff9d;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-card {
+    position: absolute;
+    display: block;
+    width: 85%;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(135deg, #0077ff, #00a2ff);
+    color: #fff;
+    padding: 4px;
+    border-radius: 14px;
+    font-weight: bold;
+    transition: .3s;
+    bottom: 15px;
+}
+
+.btn-card:hover {
+    transform: scale(1.03);
+}
+
+@media(max-width:600px) {
+
+
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .section-title p {
+        font-size: 15px;
+    }
+
+    .carousel {
+        gap: 14px;
+       
+        height: 70vh;
+    }
+
+    .carousel-container {
+        width: 95vw;
+    }
+
+
+    .card {
+        height: 400px;
+    }
+
+    .card img {
+        height: 150px;
+        transition: all .3s ease;
+    }
+
+    .badge {
+        top: 5px;
+        left: 8px;
+        overflow: auto;
+    }
+
+    .card:hover {
+        height: 96%;
+        animation-play-state: paused;
+    }
+
+    .card:hover img {
+        height: 100px;
+        width: 150px;
+    }
+
+    .card:hover .badge{
+        left: 120px;
+    }
+
+    .rank {
+        display: none;
+    }
+
+    .content-rank {
+        padding: 15px;
+    }
+
+    .content-rank h3 {
+        font-size: 20px;
+    }
+
+    .content-rank p {
+        font-size: 13px;
+        display: none;
+    }
+
+    .card:hover .content-rank p {
+        display: block;
+
+    }
+
+    .stars{
+        font-size: 15px;
+    }
+
+    .old-price{
+        font-size: 12px;
+    }
+
+    .price {
+        font-size: 20px;
+
+    }
+
+    .price-area {
+        transition: all 0.3s ease;
+        
+    }
+
+    .card:hover .price-area {
+        scale: 0.8;
+    }
+
+    .btn-card {
+        padding: 12px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+    .card:hover .btn-card {
+        scale: 0.7;
+        padding: 5px;
+    }
+
+    .n-btn {
+        display: none;
+    }
+}
