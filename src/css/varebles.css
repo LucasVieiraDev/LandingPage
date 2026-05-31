@@ -23,6 +23,9 @@
     --color-5: #010101;
     --color-6: #010101f4;
 
-    --animacao-tempo: 50s
+    --animacao-tempo: 50s;
+    --card-width-1: 300px;
+    --card-width-2: 200px;
+    
 
 }

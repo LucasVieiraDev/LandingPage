@@ -27,13 +27,6 @@
 
     background: linear-gradient(135deg, #081120, #101c31, #081120);
     padding-bottom: 25px;
-    /* mask-image: linear-gradient(
-        to right,
-        rgba(0,0,0,0),
-        rgba(0,0,0,1) 20%,
-        rgba(0,0,0,1) 80%,
-        rgba(0,0,0,0),
-    ); */
 }
 
 .n-btn {
@@ -80,26 +73,25 @@
 .carousel {
     position: relative;
     display: flex;
+    align-items: center;
     gap: 22px;
     overflow-x: auto;
+    /* scroll-snap-type: x mandatory; Trava a rolagem no eixo X */
     scroll-behavior: auto;
     scrollbar-width: none;
     padding: 20px;
-    height: 85vh;
-    overflow: visible;
+    height: 600px;
+    
     width: 100%;
     /* background-color: #4cff9d; */
     transition: all .5s ease;
 }
 
-.carousel::-webkit-scrollbar {
+/* .carousel::-webkit-scrollbar {
     display: none;
-}
+} */
 
-.carousel:hover .card{
-    animation-play-state: paused;
-    filter: grayscale(1);
-}
+
 
 @keyframes runLeft {
     to{
@@ -110,12 +102,12 @@
 .card {
     position: absolute;
     width: 300px;
-    height: 600px;
+    height: 550px;
     background: rgba(255, 255, 255, .08);
     border: 1px solid rgba(255, 255, 255, .1);
     backdrop-filter: blur(18px);
     border-radius: 20px;
-    left: calc(300px * 7);
+    left: calc(var(--card-width-1) * 7);
     animation-name: runLeft;
     animation-duration: var(--animacao-tempo);
     animation-timing-function: linear;
@@ -146,12 +138,7 @@
 }
 
 
-.carousel .card:hover {
-    transform: translateY(-4px) scale(1.04);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, .35);  
-    animation-play-state: paused;  
-    filter: grayscale(0);
-}
+
 
 
 
@@ -185,7 +172,7 @@
 
 .card img {
     width: 100%;
-    height: 30vh;
+    height: 35%;
     object-fit: contain;
 
     border-radius: 20px;
@@ -258,6 +245,20 @@
     transform: scale(1.03);
 }
 
+@media (min-width:601px) {
+
+    .carousel:hover .card{
+        animation-play-state: paused;
+        filter: grayscale(1);
+    }
+    .carousel .card:hover {
+        transform: translateY(-4px) scale(1.04);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, .35);  
+        animation-play-state: paused;  
+        filter: grayscale(0);
+    }
+}
+
 @media(max-width:600px) {
 
 
@@ -272,8 +273,8 @@
 
     .carousel {
         gap: 14px;
-       
-        height: 70vh;
+        height: 60vh;
+        scrollbar-width: thin;
     }
 
     .carousel-container {
@@ -282,10 +283,13 @@
 
 
     .card {
-        height: 400px;
+        height: 355px;
+        width: var(--card-width-2);
+        left: calc(var(--card-width-2) * 6);
     }
 
     .card img {
+        width: 200px;
         height: 150px;
         transition: all .3s ease;
     }
@@ -294,19 +298,33 @@
         top: 5px;
         left: 8px;
         overflow: auto;
+        font-size: 10px;
+        padding: 4px 8px;
     }
 
-    .card:hover {
-        height: 96%;
+    .carousel:active .carousel-wrapper {
+        overflow: visible;
+    }
+
+    .carousel:active .card{
         animation-play-state: paused;
+        filter: grayscale(1);
     }
 
-    .card:hover img {
+    .carousel .card:active {
+        transform: translateY(-4px) scale(1.04);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, .35);  
+        animation-play-state: paused;  
+        filter: grayscale(0);
+        height: 430px;
+    }
+
+    .card:active img {
         height: 100px;
         width: 150px;
     }
 
-    .card:hover .badge{
+    .card:active .badge{
         left: 120px;
     }
 
@@ -319,29 +337,31 @@
     }
 
     .content-rank h3 {
-        font-size: 20px;
+        font-size: 15px;
+        padding: 0;
+        margin: 0;
     }
 
     .content-rank p {
-        font-size: 13px;
+        font-size: 10px;
         display: none;
     }
 
-    .card:hover .content-rank p {
+    .card:active .content-rank p {
         display: block;
 
     }
 
     .stars{
-        font-size: 15px;
+        font-size: 10px;
     }
 
     .old-price{
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .price {
-        font-size: 20px;
+        font-size: 15px;
 
     }
 
@@ -350,20 +370,21 @@
         
     }
 
-    .card:hover .price-area {
+    .card:active .price-area {
         scale: 0.8;
     }
 
     .btn-card {
-        padding: 12px;
-        font-size: 14px;
+        padding: 6px;
+        font-size: 15px;
+        font-weight: 400;
         transition: all 0.3s ease;
     }
-
-    .card:hover .btn-card {
+ 
+    .card:active .btn-card {
         scale: 0.7;
         padding: 5px;
-    }
+    } 
 
     .n-btn {
         display: none;

@@ -5,8 +5,9 @@ const right = document.querySelector('.right');
 const titulo = document.querySelectorAll('.titulo_slide');
 const destaque = document.querySelectorAll('.titulo-destaque');
 const conteudo = document.querySelectorAll('.conteudo');
-const image = document.querySelectorAll('.image')
+const image = document.querySelectorAll('.image');
 const content = document.querySelectorAll('.content')
+const glass = document.querySelectorAll('.glass')
 
 index = 0;
 lastSlide = slideArray.length - 1;
@@ -19,6 +20,7 @@ function changeSlide(){
     let activeConteudo = document.querySelector('.conteudo.animacao');
     let activeImage = document.querySelector('.image.animacao');
     let activeContent = document.querySelector('.content.animacao')
+    let activeGlass = document.querySelector('.glass.animacao')
 
     activeSlide.classList.remove('active');
     activeTitulo.classList.remove('animacao');
@@ -26,6 +28,7 @@ function changeSlide(){
     activeConteudo.classList.remove('animacao');
     activeImage.classList.remove('animacao');
     activeContent.classList.remove('animacao')
+    activeGlass.classList.remove('animacao')
 
     void titulo.offsetWidth;
 
@@ -35,6 +38,7 @@ function changeSlide(){
     conteudo[index].classList.add('animacao'); 
     image[index].classList.add('animacao'); 
     content[index].classList.add('animacao')
+    glass[index].classList.add('animacao')
     
 }
 
@@ -69,9 +73,6 @@ left.onclick = () => {
 
     intervaloInicio()
 }
-
-
-
 
 let intervalo;
 
