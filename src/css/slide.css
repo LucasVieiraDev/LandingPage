@@ -63,11 +63,11 @@
 @keyframes showContent {
     from{
         transform: translateY(40px);
-        filter: blur(30px);
+        opacity: 0;
     }to {
         transform: translateY(0);
         opacity: 1;
-        filter: blur(0);
+        
     }
 }
 
