@@ -13,6 +13,14 @@
 #container {
     background-image: url('../images/background-mobile.png');
     background-size: contain;
+    
+}
+
+.local{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h2.title{
@@ -35,17 +43,14 @@ h2.titulo {
         font-size: 2rem;
     }
 
-    &::before {
-        content: '';
-        display: block;
-        width: 60px;
-        height: 4px;
-        background-color: var(--color-2);
-        position: absolute;
-        bottom: 0;
-        border-radius: 30px;
 
-    }
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 1rem;
 }
 
 a.btn {
@@ -69,22 +74,24 @@ a.btn {
 }
 
 .btn-default {
-    background-color: var(--color-2);
+    background-color: var(--color-7);
     color: var(--color-5);
+    border: 2px solid var(--color-7);
 
     &:hover {
-        background-color: var(--color-1);
+        background-color: var(--color-3);
+        
     }   
 }
 
 .btn-outlined {
     background-color: transparent;
-    color: var(--color-2);
-    border: 2px solid var(--color-2);
+    color: var(--color-3);
+    border: 2px solid var(--color-7);
 
     &:hover {
-        background-color: var(--color-1);
-        color: var(--color-3);
+        background-color: var(--color-7);
+        color: var(--color-6);
     }
 }
 
@@ -109,7 +116,7 @@ a.btn {
         font-size: 1rem;
         font-weight: 500;
         max-width: 900px;
-        padding: 40px 20px;
+        padding: 20px 20px;
     }
 
     .home-actions {
@@ -118,22 +125,30 @@ a.btn {
         margin-top: 12px;
     }
 
+.local {
+    background: #fff;
+    width: 100%;
+    
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
 
-#trending {
+#servicos {
     padding: 32px 4%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 32px;
-    min-height: calc(100vh - 96px);
+    position: relative;
 
-    .trending-cards {
-        height: 1300px;
+    .servicos-cards {
+        height: 1500px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        
+        position: relative;
 
         .contain-card{
             position: relative;
@@ -149,7 +164,7 @@ a.btn {
             transition: .7s;
             overflow:hidden;
 
-            .trending-card {
+            .servicos-card {
                 position: relative;
                 display: flex;
                 justify-content: center;
@@ -164,7 +179,7 @@ a.btn {
                 }
     
     
-                .trending-card-description {
+                .servicos-card-description {
                     
                     margin-top: 270px;
                     text-transform: uppercase;
@@ -206,7 +221,7 @@ a.btn {
             box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.35);
         }
 
-        .contain-card:hover .trending-card-description{
+        .contain-card:hover .servicos-card-description{
             margin-top: 125px;
             
         }

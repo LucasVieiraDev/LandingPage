@@ -56,6 +56,20 @@ header {
     }    
 }
 
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1; /* Garante que fique por cima do resto */
+  top: 50px; /* Ajuste conforme necessário */
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
 @media (min-width: 769px) {
     header {
         .navbar {
