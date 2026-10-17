@@ -109,14 +109,19 @@ a.btn {
     
 }
 
+    .local h3{
+        margin-bottom: 1.25rem;
+        text-align: center;
+    }
+
 
     .home-description {
         color: var(--color-5);
         text-align: center;
         font-size: 1rem;
-        font-weight: 500;
+        font-weight: 400;
         max-width: 900px;
-        padding: 20px 20px;
+        padding: 10px 20px;
     }
 
     .home-actions {
@@ -128,7 +133,7 @@ a.btn {
 .local {
     background: #fff;
     width: 100%;
-    
+    max-width: 660px;
     padding: 30px;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -143,9 +148,11 @@ a.btn {
     position: relative;
 
     .servicos-cards {
-        height: 1500px;
+        height: 100%;
+        max-width: 660px;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 40px;
         justify-content: space-around;
         align-items: center;
         position: relative;
@@ -392,6 +399,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     padding: 3rem 3.5rem;
+    
 }
 
 .footer_contacts{
@@ -400,6 +408,8 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 0.75rem;
+    max-width: 300px;
+    text-align: center;
 }
 
 .footer_contacts img{
@@ -468,7 +478,13 @@ footer {
     gap: 0.75rem;
     list-style: none;
     margin-top: 3%;
+    align-items: center;
 }
+.footer-list h3{
+    color: var(--color-2);
+    font-size: 1.25rem;
+}
+
 .footer-list li a{
     color: var(--color-3 );
     text-decoration: none;
@@ -479,6 +495,32 @@ footer {
 }
 .footer-list li a:hover{
     color: var(--color-2);
+}
+
+.locais{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3%;
+    max-width: 300px;
+}
+.locais h3{
+    color: var(--color-2);
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+}
+.locais p{
+    color: var(--color-3);
+    text-align: center;
+    font-size: 1rem;
+
+    span {
+        color: var(--color-2);
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
 }
 
 .Copyright{
@@ -567,7 +609,5 @@ footer {
     .footer_content{
         flex-direction: row;
     }
-    .footer-list{
-        flex-direction: row;
-    }
+
 }

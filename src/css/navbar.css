@@ -50,7 +50,7 @@ header {
                 }
             }
         }
-        .btn-default {
+        .btn-outlined {
             display: none;
         }
     }    
@@ -86,7 +86,7 @@ header {
                 padding: 0 ;
 
             }
-            .btn-default {
+            .btn-outlined {
                 display: block;
             }
         }   
