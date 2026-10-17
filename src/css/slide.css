@@ -201,6 +201,24 @@
 }
 
 @media (max-width: 768px){
+    
+    
+    /* Correção de nitidez para celulares */
+
+    .animacao {
+        animation-name: showContentMobile;
+    }
+
+    @keyframes showContentMobile {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
 
 
     .slide{
